@@ -5,13 +5,13 @@ import "./register.css"
 import { Formik, Form } from 'formik';
 import { TextField } from './TextField';
 import * as Yup from 'yup';
-
+import axios from "axios"
 function Register() {
   const validate = Yup.object({
-    firstName: Yup.string()
+   nom: Yup.string()
       .max(15, 'Must be 15 characters or less')
       .required('Required'),
-    lastName: Yup.string()
+    prenom: Yup.string()
       .max(20, 'Must be 20 characters or less')
       .required('Required'),
     email: Yup.string()
@@ -20,25 +20,29 @@ function Register() {
     password: Yup.string()
       .min(6, 'Password must be at least 6 charaters')
       .required('Password is required'),
-    confirmPassword: Yup.string()
-      .oneOf([Yup.ref('password'), null], 'Password must match')
-      .required('Confirm password is required'),
+    
   })
+
   return (
     <div>
      <Header /> 
      <div className='cardcontainerr'>
      <Formik
       initialValues={{
-        firstName: '',
-        lastName: '',
+       nom: '',
+        prenom: '',
         email: '',
         password: '',
-        confirmPassword: ''
+       
       }}
       validationSchema={validate}
       onSubmit={values => {
-        console.log(values)
+        console.log(values);
+          try {
+          axios.post('http://localhost:8000/auth/singup', values).then(r => console.log(r)).catch(e => console.log(e))
+        } catch (error) {
+         
+        }
       }}
       >
             {formik => (
@@ -46,16 +50,17 @@ function Register() {
          
           <Form className='formS'>
           <p className="WelcomeTextS">Sign UP</p>
-            <TextField placeholder="firstName" name="firstName" type="text" className="inputS" />
-            <TextField placeholder="lastName" name="lastName" type="text" className="inputS"/>
+            <TextField placeholder="nom" name="nom" type="text" className="inputS" />
+            <TextField placeholder="prenom" name="prenom" type="text" className="inputS"/>
             <TextField placeholder="email"name="email" type="email" className="inputS"/>
             <TextField placeholder="password" name="password" type="password" className="inputS"/>
-            <TextField placeholder="confirmPassword"name="confirmPassword" type="password"className="inputS" />
+            
             <div className="text-center pt-1 mb-12 pb-1">
                           <button className='btn'
                             type="submit"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
+                            
                           >
                             Register
                           </button>

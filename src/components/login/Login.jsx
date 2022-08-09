@@ -3,7 +3,7 @@ import{useState} from 'react'
 import Header from '../Header/Header'
 import imagee from "../../assests/images/pcc.jpg"
 import "./login.css"
-
+import axios from "axios"
 const Login = () => {
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
@@ -14,16 +14,16 @@ const Login = () => {
   const handlePassword=(e)=>{
     setPassword(e.target.value)
    }
-  //  const handleApi=()=>{
-  //   console.log({email,password})
-  //   axios.post('http://localhost:5000/posts/login',{email:email,
-  //  password:password}).then(result=>{
-  //   console.log(result)
-  //  })
-  //  .catch(error=>{
-  //   console.log(error)
-  //  })
-  //  }
+   const handleApi=()=>{
+    console.log({email,password})
+    axios.post('http://localhost:8000/auth/signin',{email:email,
+   password:password}).then(result=>{
+    console.log(result)
+   })
+   .catch(error=>{
+    console.log(error)
+   })
+   }
    const handleSubmit = event => {
     event.preventDefault();
     console.log('form submitted ');
@@ -63,7 +63,7 @@ const Login = () => {
                             type="submit"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
-                            // onClick={handleApi}
+                             onClick={handleApi}
                           >
                             Log in
                           </button>

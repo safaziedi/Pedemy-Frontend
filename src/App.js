@@ -5,6 +5,7 @@ import Register from "./components/register/Register";
 import Courses from "./components/Courses/Courses"
 import Contact from "./components/Contact/Contact"
 import Profil from './components/profil/Profil'
+import ModifierProfil from "./components/profil/Modifier/modifierProfil";
 function App() {
   return( 
     
@@ -17,6 +18,7 @@ function App() {
   <Route path ="/courses" element={<Courses/>}/>
   <Route path ="/contact" element={<Contact/>}/>
   <Route path ="/profil" element={<Profil/>}/>
+  <Route path ="/modifierprofil" element={<ModifierProfil/>}/>
   </Routes>
   
   </div>
