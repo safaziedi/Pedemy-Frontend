@@ -1,0 +1,47 @@
+.cardcontainerr {
+    display: flex;
+    height: 750px;
+    width: 1180px;
+    box-shadow: 2px 1px 3px 3px  #eeeaea;
+    margin: auto;
+    margin-top: 20px
+  }
+  .formS{
+    display:block;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 45px;
+    margin-right: 50px;
+  }
+  .WelcomeTextS {
+    margin: 1rem 0 2rem 4rem;
+  font-size: 40px;
+  font-family: 'Poppins',sans-serif;
+
+  }
+  .inputS{
+    
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 0%;
+    padding: 0 10px;
+    
+    font-size: 14px;
+    font-weight: 300;
+    border-bottom: 2px solid rgba(0, 0,0, 0.2);
+    
+  }
+
+  .sides{
+    display:flex;
+    justify-content:center;
+    
+  }
+  .sides img{
+    width: 745px;
+    height: 750px;
+   margin-left: 90px;
+  }

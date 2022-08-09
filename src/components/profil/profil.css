@@ -1,0 +1,34 @@
+.containerP {
+    display: flex;
+    height: 290px;
+    width: 100%;
+    box-shadow: 0px 0px 0px 0px  #eeeaea;
+    margin: auto;
+    margin-top: 0px;
+    background-image: linear-gradient(to right,rgb(65, 65, 247),rgb(118, 118, 252));
+  }
+  .containerliste {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0px 0px 0px 0px  #eeeaea;
+    margin: auto;
+    margin-top: 0px;
+    background-color: rgb(250, 250, 250);
+}
+ .containerliste a{
+    margin-top: 1%;
+    margin-left: 18%;
+    display: flex;
+    
+}
+
+.containerCOU {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  box-shadow: 0px 0px 0px 0px  #eeeaea;
+  margin: auto;
+  margin-top: 0px;
+  background-color: rgb(250, 250, 250);
+}

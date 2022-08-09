@@ -9,17 +9,17 @@ const footerQuickLinks = [
     url: "#",
   },
   {
-    display: "About US",
+    display: "courses",
     url: "#",
   },
 
   {
-    display: "Courses",
+    display: "contact",
     url: "#",
   },
 
   {
-    display: "Blog",
+    display: "login",
     url: "#",
   },
 ];
@@ -52,7 +52,7 @@ const Footer = () => {
         <Row>
           <Col lg="3" md="6" className="mb-4">
             <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> Learners.
+              <i className="ri-pantone-line"></i> Pedemy.
             </h2>
 
             <div className="follows">
@@ -60,28 +60,28 @@ const Footer = () => {
               <span>
                 {" "}
                 <a href="facebook.com">
-                  <i class="ri-facebook-line"></i>
+                  <i className="ri-facebook-line"></i>
                 </a>
               </span>
 
               <span>
                 {" "}
                 <a href="facebook.com">
-                  <i class="ri-instagram-line"></i>
+                  <i className="ri-instagram-line"></i>
                 </a>
               </span>
 
               <span>
                 {" "}
                 <a href="facebook.com">
-                  <i class="ri-linkedin-line"></i>
+                  <i className="ri-linkedin-line"></i>
                 </a>
               </span>
 
               <span>
                 {" "}
                 <a href="facebook.com">
-                  <i class="ri-twitter-line"></i>
+                  <i className="ri-twitter-line"></i>
                 </a>
               </span>
             </div>
@@ -114,9 +114,9 @@ const Footer = () => {
           <Col lg="3" md="6">
             <h6 className="fw-bold">Get in Touch</h6>
 
-            <p>Address: Sylhet, Bangladesh</p>
-            <p> Phone: +88 0123456789 </p>
-            <p>Email: example@gmail.com</p>
+            <p>Address: Lac1,tunis</p>
+            <p> Phone: +216 23680343 </p>
+            <p>Email: hello@pepolls.com</p>
           </Col>
         </Row>
       </Container>

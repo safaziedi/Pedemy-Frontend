@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;600;700;800&display=swap"); */
 
 /* =========== base style ========= */
 
@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 section,
@@ -20,13 +21,16 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6{
   font-size: 2rem;
   line-height: 50px;
   font-family: "Poppins", sans-serif;
-  color: #0a2b1e;
+  color: #00020c;
   font-weight: 600;
 }
+a{
+  color: #00020c;
+ }
 
 p {
   color: #596b65;
@@ -37,12 +41,12 @@ p {
 }
 
 button.btn {
-  background: #17bf9e;
+  background: #4831f7;
   color: #fff;
-  padding: 7px 25px;
+  padding: 10px 30px;
   border-radius: 50px;
 }
 
 i {
-  color: #17bf9e;
+  color: #0f0bf2;
 }

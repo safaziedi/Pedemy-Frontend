@@ -3,7 +3,7 @@ import "./testimonial.css";
 import { Container, Row, Col } from "reactstrap";
 import Slider from "react-slick";
 
-import img from "../../assests/images/testimonial01.png";
+import img from "../../assests/images/work.webp";
 
 const Testimonials = () => {
   const settings = {
@@ -22,17 +22,17 @@ const Testimonials = () => {
           <Col lg="10" md="12" className="m-auto">
             <div className="testimonial__wrapper d-flex justify-content-between align-items-center ">
               <div className="testimonial__img w-50">
-                <img src={img} alt="" className="w-100" />
+                <img src={img} alt="" className="w-99" />
               </div>
 
               <div className="testimonial__content w-50">
-                <h2 className="mb-4">Our Students Voice</h2>
+                <h2 className="mb-4">Notre workshop</h2>
 
                 <Slider {...settings}>
                   <div>
                     <div className="single__testimonial">
                       <h6 className="mb-3 fw-bold">
-                        Excellent course of materials
+                      Blockchain
                       </h6>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -41,8 +41,8 @@ const Testimonials = () => {
                       </p>
 
                       <div className="student__info mt-4">
-                        <h6 className="fw-bold">Jhon Doe</h6>
-                        <p>California, United State</p>
+                        <h6 className="fw-bold">Amine BNR</h6>
+                        <p>Tunis, Pepolls</p>
                       </div>
                     </div>
                   </div>
@@ -50,7 +50,7 @@ const Testimonials = () => {
                   <div>
                     <div className="single__testimonial">
                       <h6 className="mb-3 fw-bold">
-                        Excellent course of materials
+                      Intelegence artificiel
                       </h6>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -59,8 +59,8 @@ const Testimonials = () => {
                       </p>
 
                       <div className="student__info mt-4">
-                        <h6 className="fw-bold">Jhon Doe</h6>
-                        <p>California, United State</p>
+                        <h6 className="fw-bold">jihed </h6>
+                        <p>tunis, Pepols</p>
                       </div>
                     </div>
                   </div>
@@ -68,7 +68,7 @@ const Testimonials = () => {
                   <div>
                     <div className="single__testimonial">
                       <h6 className="mb-3 fw-bold">
-                        Excellent course of materials
+                       Designe
                       </h6>
                       <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -77,8 +77,8 @@ const Testimonials = () => {
                       </p>
 
                       <div className="student__info mt-4">
-                        <h6 className="fw-bold">Jhon Doe</h6>
-                        <p>California, United State</p>
+                        <h6 className="fw-bold">Amino</h6>
+                        <p>Tunis, Pepolls</p>
                       </div>
                     </div>
                   </div>

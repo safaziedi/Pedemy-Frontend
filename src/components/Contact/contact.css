@@ -1,0 +1,41 @@
+.containerC {
+    display: flex;
+    height: 550px;
+    width: 900px;
+    box-shadow: 2px 1px 3px 3px  #eeeaea;
+    margin: auto;
+    margin-top: 50px
+  }
+  .formM{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    margin-top: 60px;
+    justify-content:left;
+ 
+  }
+  .ContactMe {
+    margin: 3rem 0 2rem 0;
+    font-size: 40px;
+    font-family: 'Poppins',sans-serif;
+  }
+  .inputC{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    bottom: 0%;
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 0%;
+    padding: 0 10px;
+    margin-top: 5%;
+    font-size: 14px;
+    font-weight: 300;
+    border-bottom: 2px solid rgba(0, 0,0, 0.2);
+  margin-bottom: 2em;
+  }
+  
+ 

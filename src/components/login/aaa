@@ -1,0 +1,257 @@
+<form  className="formS">
+      <p className="WelcomeTextS">Sign UP</p>
+      <div class="flex space-s-2 mt-4">
+                          <input className="inputS"
+                            name="First Name"
+                            type="First Name"
+                            autoComplete="First Name"
+                            required
+                            id="First-Name"
+                            placeholder="First Name"
+                        
+                          />
+                     
+                          <input className="inputS"
+                            name="Last Name"
+                            type="Last Name"
+                            autoComplete="Last Name"
+                            required
+                            id="Last-Name"
+                            placeholder="Last Name"
+                          />
+                       
+                        </div>
+      </form>
+      ////////////////////////////////////////////////////
+      <form className="formM">
+        <div className="mb-4">
+                                  <input className="input"
+                                    name="name"
+                                    type="name"
+                                    autoComplete="name"
+                                    required
+                                    id="name"
+                                    placeholder="name"
+                                 
+                                  />
+                               
+                                <input className="email"
+                                    name="email"
+                                    type="email"
+                                    autoComplete="email"
+                                    required
+                                    id="email"
+                                    placeholder="email"
+                                 
+                                  />
+                                </div>
+                                <div className="mb-4">
+                                <textarea
+                        className="form-control rounded-0"
+                        id="message"
+                        name="message"
+                        placeholder="Message"
+                        rows="5" 
+                        required
+                      ></textarea>
+                      </div>
+                      <br />
+                          <button className="btn" type="submit"> 
+                          Send
+                          </button>
+        </form>
+        ////////////////////////////////////////
+        <Container> 
+     <Row className="mb-5 mt-3">
+       <Col lg="18"md="6">
+       <p className="ContactMe">Contact Me</p>
+         <hr  className="t_border my-4 ml-0 text-left  " />
+       </Col>
+       <Row >
+          <Col lg="6" md="6" className="mb-6">
+            <h6 className="fw-bold">Get in Touch</h6>
+            <p>Address: Lac1,tunis</p>
+            <p> Phone: +216 23680343 </p>
+            <p>Email: hello@pepolls.com</p>
+          </Col>
+          </Row>
+          </Row>
+          <Row>
+          <Col lg="6" md="6">
+            <form  className="formM">
+              <Row>
+                <Col lg="6" className="form-group">
+                  <input
+                    className="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Name" 
+                    type="text"
+                    required 
+                  />
+                </Col>
+                <Col lg="6" className="form-group">
+                  <input
+                    className="form-control rounded-0"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    type="email" 
+                    required 
+                  />
+                </Col>
+              </Row>
+              <textarea
+                className="form-control rounded-0"
+                id="message"
+                name="message"
+                placeholder="Message"
+                rows="5" 
+                required
+              ></textarea>
+              <br />
+              <Row>
+                <Col lg="12" className="form-group">
+                  <button className="btn ac_btn" type="submit"> 
+                  Send
+                  </button>
+                </Col>
+              </Row>
+            </form>
+          </Col>
+          </Row>
+     </Container>
+     ////////////////////////////////////import React, { useRef } from "react";
+import { Container } from "reactstrap";
+import "./header.css";
+
+
+const Header = () => {
+  const menuRef = useRef();
+
+  const menuToggle = () => menuRef.current.classList.toggle("active__menu");
+
+  return (
+    <header className="header">
+      <Container>
+        <div className="navigation d-flex align-items-center justify-content-between">
+          <div className="logo">
+            <h1 className=" d-flex align-items-center gap-1">
+            <i className="ri-pantone-line"></i>Pedemy.
+            </h1>
+          </div>
+
+          <div className="nav d-flex align-items-center gap-5">
+            <div className="nav__menu" ref={menuRef} onClick={menuToggle}>
+              <ul className="nav__list">
+             
+                
+    
+   <nav >
+        <a href ="http://localhost:3000" style={{marginRight:"15px",color:"black", textDecoration:"none",fontWeight:600,fontSize:20}}>Home  </a>
+        <a href ="http://localhost:3000/courses" style={{marginRight:"15px",color:"black",textDecoration:"none",fontWeight:600,fontSize:20}}> Courses </a>
+        <a href ="http://localhost:3000/contact" style={{marginRight:"15px",color:"black",textDecoration:"none",fontWeight:600,fontSize:20}}> Contact </a>
+        <a href ="http://localhost:3000/login" style={{marginRight:"15px",color:"black",textDecoration:"none",fontWeight:600,fontSize:20}}> Sign IN </a>
+    </nav>
+              </ul>
+            </div>
+
+            
+          </div>
+
+          <div className="mobile__menu">
+            <span>
+              <i className="ri-menu-line" onClick={menuToggle}></i>
+            </span>
+          </div>
+        </div>
+      </Container>
+    </header>
+  );
+};
+////////////////////
+.header {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  background-color: rgb(249, 249, 249);
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  column-gap: 1.3rem;
+}
+
+.nav__item a {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #0a2b1e;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav__item a:hover {
+  color: #0857E0;
+}
+
+.nav__right p {
+  font-weight: 500;
+  color: #0857E0;
+  font-size: 1.1rem;
+}
+
+.nav__right p i {
+  font-size: 1.3rem;
+}
+
+.mobile__menu span i {
+  font-size: 1.4rem;
+  color: #0857E0;
+  cursor: pointer;
+}
+
+.mobile__menu {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ 
+    z-index: 99;
+    display: none;
+  }
+
+  .nav__list {
+    position: absolute;
+    background: #fff;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    padding-top: 80px;
+   
+  }
+
+  .mobile__menu {
+    display: block;
+  }
+  .nav__right {
+    display: none;
+  }
+
+  .active__menu {
+    display: block;
+  }
+}
