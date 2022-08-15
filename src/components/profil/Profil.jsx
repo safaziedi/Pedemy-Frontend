@@ -1,5 +1,6 @@
 import React from 'react'
 import "./profil.css"
+//import img from "../../assests/images/pro.jpg"
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 const Profil = () => {
@@ -7,15 +8,33 @@ const Profil = () => {
   return (
     <div>
 <Header />
-<div className='containerP'>
-</div>
-<div className='containerliste'>
-<a href ="" style={{color:"black", textDecoration:"none",fontWeight:600,fontSize:20}}>Courses déja regarder</a>
-<a href ="" style={{marginLeft:"30px",color:"black",textDecoration:"none",fontWeight:600,fontSize:20}}> Courses en train de regarder</a>
 
-</div>
-<div className='containerCOU'>
-</div>
+<div className="containerP">
+<form methode="">
+  <div className='row'>
+    <div className='col-md-4'>
+      {/* <img src={img} alt="" /> */}
+    </div>
+    <div className='col-md-6'>
+    <div className='col-md-4'>
+      <img src="" alt="" />
+    </div>
+    </div>
+  </div>
+
+
+
+
+</form>
+  
+
+
+  
+  </div> 
+          
+
+
+
 <Footer />
 
     </div>

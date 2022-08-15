@@ -255,3 +255,44 @@ const Header = () => {
     display: block;
   }
 }
+//////////////////////////
+
+
+
+.containerP {
+  display: flex;
+  height: 200px;
+  width:600px;
+
+  box-shadow: 3px 3px 3 1px  #eeeaea;
+  margin: auto;
+  margin-top: 10px;
+  background-color:rgb(141, 141, 237);
+}
+
+
+
+
+.buttonM{
+display: flex;
+margin-top: 20px;
+margin-left: 1100px;
+justify-content:center;
+border: none;
+outline: none;
+padding: 11px 0;
+font-size: 19px;
+border-radius: 5px;
+width: 150px;
+height: 50px; 
+background: #929699;
+}
+.sicon-account{
+display: flex;
+margin-top: 100px;
+margin-right: 100px; 
+}
+.ri-account-circle-line{
+color:rgba(88, 92, 95, 0.782);
+font-size: 150px;
+}

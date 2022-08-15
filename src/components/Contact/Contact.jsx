@@ -2,8 +2,37 @@ import React from 'react'
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import "./contact.css";
+import axios from "axios"
+import{useState} from 'react'
 import { Container, Row, Col } from "reactstrap";
 const Contact = () => {
+  const [nom,setNom]=useState('');
+  const [email,setEmail]=useState('');
+  const [message,setMessage]=useState('');
+  console.log({nom,email,message})
+  const handleNom=(e)=>{
+    setNom(e.target.value)
+   }
+  const handleEmail=(e)=>{
+    setEmail(e.target.value)
+  }
+  const handleMessage=(e)=>{
+    setMessage(e.target.value)
+   }
+   const handleApi=()=>{
+    console.log({nom,email,message})
+    axios.post('http://localhost:8000/contacts',{nom:nom,email:email,
+   message:message}).then(result=>{
+    console.log(result)
+   })
+   .catch(error=>{
+    console.log(error)
+   })
+   }
+   const handleSubmit = event => {
+    event.preventDefault();
+    console.log('form submitted ');
+  };
   return (
     <div>
 <Header />
@@ -25,7 +54,7 @@ const Contact = () => {
             <p>********************</p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
-            <form  className="contact__form w-100">
+            <form  className="contact__form w-100" onSubmit={handleSubmit}>
               <Row>
                 <Col lg="6" className="form-group">
                   <input
@@ -35,6 +64,8 @@ const Contact = () => {
                     placeholder="Name" 
                     type="text"
                     required 
+                    value={nom}
+                    onChange={handleNom}
                   />
                 </Col>
                 <Col lg="6" className="form-group">
@@ -45,6 +76,8 @@ const Contact = () => {
                     placeholder="Email"
                     type="email" 
                     required 
+                    value={email}
+                    onChange={handleEmail}
                   />
                 </Col>
               </Row>
@@ -55,12 +88,15 @@ const Contact = () => {
                 placeholder="Message"
                 rows="5" 
                 required
+                value={message}
+                onChange={handleMessage}
               ></textarea>
              
               <br />
               <Row>
                 <Col lg="12" className="form-group">
-                  <button className="btn ac_btn" type="submit"> 
+                  <button className="btn ac_btn" type="submit" onClick={handleApi}
+                          > 
                   Send
                   </button>
                 </Col>
