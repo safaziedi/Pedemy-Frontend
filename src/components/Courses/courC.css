@@ -1,0 +1,13 @@
+.btnCat{
+    border:none;
+    outline: none;
+    width: max-content;
+    text-transform: uppercase;
+    margin-left: 10px;
+    background-color: transparent;
+    color: black;
+ 
+}
+.categorie{
+    margin-left: 31%;
+}

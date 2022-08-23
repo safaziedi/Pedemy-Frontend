@@ -5,7 +5,9 @@ import Register from "./components/register/Register";
 import Courses from "./components/Courses/Courses"
 import Contact from "./components/Contact/Contact"
 import Profil from './components/profil/Profil'
-import ModifierProfil from "./components/profil/Modifier/modifierProfil";
+import Dashboard from "./components/dashboard/Dashboard";
+import Formationlis from "./components/dashboard/Formationliste/Formationliste"
+import Onecoursesvisiteur from "./components/Courses/Onecoursesvisiteur"
 function App() {
   return( 
     
@@ -18,7 +20,10 @@ function App() {
   <Route path ="/courses" element={<Courses/>}/>
   <Route path ="/contact" element={<Contact/>}/>
   <Route path ="/profil" element={<Profil/>}/>
-  <Route path ="/modifierprofil" element={<ModifierProfil/>}/>
+  <Route path ="/dashboard/*" element={<Dashboard/>}/>
+  <Route path ="/mescoures" element={<Formationlis/>}/>
+  <Route path ="/onecouresvisiteur" element={<Onecoursesvisiteur/>}/>
+  
   </Routes>
   
   </div>

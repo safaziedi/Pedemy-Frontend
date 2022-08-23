@@ -4,6 +4,7 @@ import Header from '../Header/Header'
 import imagee from "../../assests/images/pcc.jpg"
 import "./login.css"
 import axios from "axios"
+import { Link } from 'react-router-dom';
 const Login = () => {
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
@@ -19,7 +20,9 @@ const Login = () => {
     axios.post('http://localhost:8000/auth/signin',{email:email,
    password:password}).then(result=>{
     console.log(result)
-   })
+  
+   localStorage.setItem("token",result.data)
+  })
    .catch(error=>{
     console.log(error)
    })
@@ -59,7 +62,8 @@ const Login = () => {
                           />
                         </div>
                         <div className="text-center pt-1 mb-12 pb-1">
-                          <button className='btn'
+                          <Link to={"/dashboard"}
+                          className='btn btn-primary mt-6 ml-6'
                             type="submit"
                             data-mdb-ripple="true"
                             data-mdb-ripple-color="light"
@@ -67,7 +71,7 @@ const Login = () => {
                             
                           >
                             Log in
-                          </button>
+                          </Link>
                         </div>
                        <div>
                        <a className="text-gray-500" href="#!">

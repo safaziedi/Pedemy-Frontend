@@ -1,0 +1,78 @@
+.choose__imgC {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 777;
+  }
+
+.play__iconC {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.012);
+    z-index: 7777;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+.play__iconC i {
+    color: #131414;
+    font-size: 2rem;
+    padding: 10px;
+  }
+  .CardCour{
+    flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 0px;
+    cursor: pointer;
+    width: 300px;
+    height: 400px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  }
+  .titreC{
+    margin-left: 12%;
+    font-size: 40px;
+    color: rgb(49, 44, 44);
+    font-style:oblique;
+   
+  }
+  .titreCat{
+    margin-left: 12%;
+    font-size: 20px;
+    color: rgb(149, 144, 144);
+  }
+  .divicon{
+    margin-top: 50px;
+  }
+  .diviconb{
+    margin-top: 50px;
+  }
+  .CardCour2{
+    flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 0px;
+    cursor: pointer;
+    width: 350px;
+    height: 200px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  }
+  .pragraphe{
+font-size: 28px;
+  }
+  .suite{
+   
+    font-size: 35px;
+    color: rgb(149, 144, 144);
+    margin-top: 200px;
+  }

@@ -2,11 +2,13 @@ import React from 'react'
 import Header from '../Header/Header'
 import images from "../../assests/images/pcc.jpg"
 import "./register.css" 
-import { Formik, Form } from 'formik';
+import { Formik, Form ,Field} from 'formik';
 import { TextField } from './TextField';
 import * as Yup from 'yup';
 import axios from "axios"
+import{Radio}from "@material-ui/core"
 function Register() {
+ 
   const validate = Yup.object({
    nom: Yup.string()
       .max(15, 'Must be 15 characters or less')
@@ -18,9 +20,12 @@ function Register() {
       .email('Email is invalid')
       .required('Email is required'),
     password: Yup.string()
-      .min(6, 'Password must be at least 6 charaters')
+      .min(6, 'number must be at least 6 charaters')
       .required('Password is required'),
-    
+      phoneNumber: Yup.string()
+      .min(8, 'phoneNumber must be at least 8 charaters')
+      .required(' required'),
+      role: Yup.string ().required("required")
   })
 
   return (
@@ -33,7 +38,9 @@ function Register() {
         prenom: '',
         email: '',
         password: '',
-       
+        phoneNumber:'',
+        role:'',
+        
       }}
       validationSchema={validate}
       onSubmit={values => {
@@ -54,7 +61,15 @@ function Register() {
             <TextField placeholder="prenom" name="prenom" type="text" className="inputS"/>
             <TextField placeholder="email"name="email" type="email" className="inputS"/>
             <TextField placeholder="password" name="password" type="password" className="inputS"/>
-            
+            <TextField placeholder="phoneNumber" name="phoneNumber" type="tel"  className="inputS"/>
+            <div> <h6>role</h6></div>
+            <label><h6 className='radio'>ADMIN</h6></label>
+            <Field name="role" type="radio" value="ADMIN" as={Radio}/>
+            <label><h6 className='radio'>STUDENT</h6></label>
+            <Field name="role" type="radio" value="STUDENT" as={Radio}/>
+            <label><h6 className='radio'>TRAINER</h6></label>
+            <Field name="role" type="radio" value="TRAINER" as={Radio}/>
+
             <div className="text-center pt-1 mb-12 pb-1">
                           <button className='btn'
                             type="submit"
