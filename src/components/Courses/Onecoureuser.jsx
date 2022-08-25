@@ -1,27 +1,28 @@
 import React from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import Quiz from "../Courses/QUIZ/Quiz"
+import Rating from "../Courses/Rating/Rating"
 import { Container, Row, Col } from "reactstrap";
 import chooseImg from "../../assests/images/react.png";
 import { useState } from 'react';
 import ReactPlayer from "react-player";
-import  "./onecoursevisiteurs.css"
+import  "./onecoureuser.css";
 import CourseCard from "../Courses-section/CourseCard";
 import courseImg12 from "../../assests/images/nest.png";
 import courseImg5 from "../../assests/images/node.png";
 import courseImg6 from "../../assests/images/mongo.png";
 import {
-     Videocam ,
-    SentimentVerySatisfied,
+     
      MenuBook ,
-     School,
+    
       LooksOneTwoTone,
        LooksTwoTwoTone,
         Looks3TwoTone,
          Looks4TwoTone,
          Looks5TwoTone,
   } from "@material-ui/icons";
-const Onecoursesvisiteur = () => {
+const Onecoureuser = () => {
   const data = [
    
     {
@@ -70,7 +71,7 @@ const Onecoursesvisiteur = () => {
             <div className="choose__imgC">
               {showVideo ? (
                 <ReactPlayer
-                  url="https://www.youtube.com/watch?v=SMgQlTSoXf0&ab_channel=Grafikart.fr"
+                  url="https://www.youtube.com/watch?v=f0X1Tl8aHtA&ab_channel=FromScratch-D%C3%A9veloppementWeb"
                   controls
                   width="100%"
                   height="350px"
@@ -89,45 +90,22 @@ const Onecoursesvisiteur = () => {
               )}
             </div>
           </Col>
-          <Col lg="4" md="4">
-            <div className="CardCour">
-            <header className="w3-container w3-blue">
-             <h1>70.000TND</h1>
-             </header>
-             <div className='diviconb'>
-             <button className='btn'>Acheter</button>
-             </div>
-           <div className='divicon'>
-           <li >
-                < Videocam  className="sidebarIcon" />
-                Durée(2h)
-              </li>
-              <li >
-                < MenuBook  className="sidebarIcon" />
-                5 chapitres
-              </li>
-              <li >
-                < SentimentVerySatisfied  className="sidebarIcon" />
-                à votre rythme
-              </li>
-             
-              <li >
-                <  School  className="sidebarIcon" />
-                teste et cetificat inclus
-              </li>
-           </div>
-            </div>
-          </Col>
-        </Row>
-        <Row>
+          
+                <Col  lg="4" md="4">
+                <Quiz/>
+
+       </Col>      
+       </Row>
+       <Row>
             <Col lg="8" md="8">
-                <div className='pragraphe'> Hello everyone , in This course you will learn how to develop application from scratch with react , 
+            <div className='pragraphe1'> Hello everyone , in This course you will learn how to develop application from scratch with react , 
                   through this course we will discover the core concepts of react like component JSX and the virtual Dom , 
                   next parts we will deal with API interaction and add some routing for our application
                 </div>
                 </Col> 
                 <Col  lg="4" md="4">
-                  <div className="CardCour2">
+                 
+                  <div className="CardCour3">
                     <div className='titreCat'> < MenuBook  className="sidebarIcon" />Les chapitres</div>
   
 
@@ -152,13 +130,18 @@ const Onecoursesvisiteur = () => {
    Les Filtres "slice,filtre,sort"(1:31:12)
    </li>
      </div>
-       </Col>      
+     <div className="CardCour4">
+     <Rating/>
+     </div>
+       </Col>  
+       
         </Row>
-        
+      
+
         <Row>
         
-        <hr className="t_border my-4 ml-0 text-left" />
-          <div className='suite'>Tous les cours de la catégorie Développement</div>
+          <div className='suite'>Tous les cours de la catégorie Développement  </div>
+          
           <hr className="t_border my-4 ml-0 text-left" />
             <Row>
           {data.map((item,) => (
@@ -177,4 +160,4 @@ const Onecoursesvisiteur = () => {
   )
 }
 
-export default Onecoursesvisiteur
+export default Onecoureuser

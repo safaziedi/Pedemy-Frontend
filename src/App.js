@@ -6,8 +6,9 @@ import Courses from "./components/Courses/Courses"
 import Contact from "./components/Contact/Contact"
 import Profil from './components/profil/Profil'
 import Dashboard from "./components/dashboard/Dashboard";
-import Formationlis from "./components/dashboard/Formationliste/Formationliste"
+
 import Onecoursesvisiteur from "./components/Courses/Onecoursesvisiteur"
+import Onecoureuser from "./components/Courses/Onecoureuser"
 function App() {
   return( 
     
@@ -21,8 +22,9 @@ function App() {
   <Route path ="/contact" element={<Contact/>}/>
   <Route path ="/profil" element={<Profil/>}/>
   <Route path ="/dashboard/*" element={<Dashboard/>}/>
-  <Route path ="/mescoures" element={<Formationlis/>}/>
+  
   <Route path ="/onecouresvisiteur" element={<Onecoursesvisiteur/>}/>
+  <Route path ="/onecoureuser" element={<Onecoureuser/>}/>
   
   </Routes>
   

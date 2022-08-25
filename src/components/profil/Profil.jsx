@@ -10,14 +10,17 @@ const Profil = () => {
         var accessTokenObj = localStorage.getItem("token");
 
         const config = {
-            headers: { Authorization: `Bearer ${accessTokenObj}` }
+            headers: { Authorization: `Bearer ${accessTokenObj}` }, 
+        method: 'get',
         };
         
-    axios.get('http://localhost:8000/users/getinfouser' , config ).then(res=>{
-        setUserName(res.data.nom)
-        console.log(userNAme);
+    fetch('http://localhost:8000/users/getinfouser' , config )
+        .then((data)=>data.json())
+        .then((data)=>setUserName(data));
+
+       console.log("user",userNAme);
       
-    })}
+    }
     
     ,[])
     
@@ -45,14 +48,15 @@ const Profil = () => {
                     <div  className="col-md-6">
                         <div  className="profile-head">
                                     <h5>
-                                        Kshiti Ghelani
+                                    {userNAme.nom} &nbsp;
+                                    {userNAme.prenom}
                                     </h5>
                                     <h6>
                                         Web Developer and Designer
                                     </h6>
                             <ul className="nav nav-tabs" id="myTab" role="tablist">
                                 <li  className="nav-item">
-                                    <a  className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                    <a  className="nav-link active" id="home-tab"  href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                 </li>
                                 <li  className="nav-item">
                                 </li>
@@ -69,7 +73,7 @@ const Profil = () => {
                             <p>SKILLS</p>
                             <a href="">Web Designer</a><br/>
                             <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
+                            <a href="">WordPdatas</a><br/>
                             <a href="">WooCommerce</a><br/>
                             <a href="">PHP, .Net</a><br/>
                         </div>
@@ -85,26 +89,15 @@ const Profil = () => {
           <th>nom</th>
           <th>prenom</th>
           <th>email</th>
-          <th>password</th>
           <th>phoneNumber</th>
           
         </tr>
         </thead>
-        <tbody>
-          {/* {
-            config?.map((data,index)=>(
-              <tr > 
-                <td>{data.nom} </td>
-                <td>{data.prenom}</td>
-                <td>{data.email}</td>
-                <td>{data.password}</td>
-                <td>{data.phoneNumber}</td>
-                
-                 
-              </tr>
-            ))
-          } */}
-        </tbody>
+
+                  <td>{userNAme.nom} </td>
+                <td>{userNAme.prenom}</td>
+                <td>{userNAme.email}</td>
+                <td>{userNAme.phoneNumber}</td>
       </table>
                                         </div>
                                        

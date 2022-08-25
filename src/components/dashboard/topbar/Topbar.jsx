@@ -1,7 +1,7 @@
 import React from 'react'
 import "./topbar.css"
 import { NotificationsNone ,Person,Settings} from "@material-ui/icons";
-
+import { Link } from "react-router-dom";
 const Topbar = () => {
  
   return (
@@ -25,7 +25,9 @@ const Topbar = () => {
           <Settings />
         </div>
         <div className="topbarIconContainer">
-          <Person/>
+        <Link to="/profil">
+          <Person />
+          </Link>
         </div>
       </div>
     </div>

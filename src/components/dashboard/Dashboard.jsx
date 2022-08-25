@@ -4,8 +4,8 @@ import Topbar from './topbar/Topbar'
 import Sidebar from './Sidebar/Sidebar'
 import HomeD from "./HomeD/HomeD"
 import'./dashboard.css'
-import Formationliste from "./Formationliste/Formationliste"
-import {  Route,Routes  } from "react-router-dom";
+
+
 const Dashboard = () => {
   return (
     <div>
