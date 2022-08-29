@@ -102,6 +102,14 @@ const Onecoureuser = () => {
                   through this course we will discover the core concepts of react like component JSX and the virtual Dom , 
                   next parts we will deal with API interaction and add some routing for our application
                 </div>
+                <div>
+                <button
+        className='btnC'
+      >
+        passer le teste
+      
+      </button>
+                </div>
                 </Col> 
                 <Col  lg="4" md="4">
                  
