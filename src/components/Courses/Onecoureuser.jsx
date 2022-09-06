@@ -138,14 +138,7 @@ const Onecoureuser = () => {
      <div className="CardCour4">
      <Rating/>
      </div>
-             <div>
-                <button
-        className='btnC'
-      >
-        passer le teste
-      
-      </button>
-                </div>
+        
        </Col>  
        
         </Row>

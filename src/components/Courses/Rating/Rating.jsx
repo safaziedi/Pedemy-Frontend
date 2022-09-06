@@ -53,6 +53,14 @@ const Rating = () => {
       >
         envoyer
       </button>
+      <div>
+                <button
+        className='btnC'
+      >
+        passer le teste
+      
+      </button>
+                </div>
       
     </div>
   );
