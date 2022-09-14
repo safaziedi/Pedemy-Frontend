@@ -8,6 +8,7 @@ import chooseImg from "../../assests/images/react.png";
 import { useState } from 'react';
 import ReactPlayer from "react-player";
 import  "./onecoureuser.css";
+import Comments from "../Courses/comment/Comments"
 import CourseCard from "../Courses-section/CourseCard";
 import courseImg12 from "../../assests/images/nest.png";
 import courseImg5 from "../../assests/images/node.png";
@@ -102,6 +103,10 @@ const Onecoureuser = () => {
                   through this course we will discover the core concepts of react like component JSX and the virtual Dom , 
                   next parts we will deal with API interaction and add some routing for our application
                 </div>
+                <div className='CardCour5'>
+                 <Comments/>
+                </div>
+        
                 </Col> 
                 <Col  lg="4" md="4">
                  
@@ -133,6 +138,7 @@ const Onecoureuser = () => {
      <div className="CardCour4">
      <Rating/>
      </div>
+        
        </Col>  
        
         </Row>

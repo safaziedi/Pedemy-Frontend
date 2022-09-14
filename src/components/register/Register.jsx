@@ -63,8 +63,6 @@ function Register() {
             <TextField placeholder="password" name="password" type="password" className="inputS"/>
             <TextField placeholder="phoneNumber" name="phoneNumber" type="tel"  className="inputS"/>
             <div> <h6>role</h6></div>
-            <label><h6 className='radio'>ADMIN</h6></label>
-            <Field name="role" type="radio" value="ADMIN" as={Radio}/>
             <label><h6 className='radio'>STUDENT</h6></label>
             <Field name="role" type="radio" value="STUDENT" as={Radio}/>
             <label><h6 className='radio'>TRAINER</h6></label>
